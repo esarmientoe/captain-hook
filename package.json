@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development npm start | bistre",
+    "dev": "set NODE_ENV=development npm start | bistre",
     "start": "node index",
-    "db:setup": "createdb dev && knex migrate:latest && knex seed:run",
-    "db:reset": "dropdb dev && npm run db:setup",
+    "db:setup": "knex migrate:latest && knex seed:run",
+    "db:reset": "npm run db:setup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
