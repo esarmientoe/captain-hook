@@ -1,6 +1,6 @@
 // load the env file
 require('dotenv').load();
-var port = process.env.PORT || '6666';
+var port = process.env.PORT || '777';
 
 // how we log
 const logger = require("./src/lib/logger").logger;

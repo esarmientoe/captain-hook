@@ -11,10 +11,11 @@
 
 ## local dev
 
-`captain-hook` is a NodeJS application. if you don't have [NodeJS]
-you'll need to [download it].
+`captain-hook` is a NodeJS application. if you don't have [NodeJS](https://nodejs.org)
+you'll need to download it.
 
-`captain-hook` uses a Postgres database.
+`captain-hook` uses a Postgres database. if you don't have [Postgres](https://www.postgresql.org/download/)
+you'll need to download it.
 
 ### up and running
 
@@ -30,7 +31,7 @@ you'll need to [download it].
   | SHARED_SECRET     | Any string.                                                                                                                                                                 |
   | DATABASE_URL      | URL of your Postgres database. defaults to `localhost:5432/dev` |
 
-5. `npm db:setup`, creates a Postgres db, then runs [Knex] migrations and seeds
+5. `npm run db:setup`, creates a Postgres db, then runs [Knex] migrations and seeds, you need a [Postgres] instance and the [Postgres client applications] in the path.
 6. `npm run dev`, runs `npm start` and pipes output to nice logging
   You now have a service running on [`localhost:6666`]. You'll probably want to expose
   that to the internet for local development. [`ngrok`] is a great, free option.
@@ -41,9 +42,8 @@ the `captain hook` web interface is an express app. it servers basic CRUD functi
 
 to start it, run `npm run start:web` and then visit [`http://localhost:8080`].
 
-[NodeJS]: https://nodejs.org
-[download it]: https://nodejs.org
 [`localhost:6666`]: http://localhost:6666
 [`ngrok`]: https://ngrok.com/
 [Knex]: http://knexjs.org/
 [`http://localhost:8080`]: http://localhost:8080
+[Postgres client applications]:https://www.postgresql.org/docs/9.1/static/app-createdb.html
